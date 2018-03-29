@@ -1,0 +1,29 @@
+"Frame_Size" = 220
+"Frame_Thickness" = 6
+"Arm_Width" = 30
+
+"Motor_Mount_Hole_Diameter" = 8
+"Motor_Shaft_Diameter" = 3
+
+"Screw_Nut_Diameter" = 5
+"Screw_Diameter" = 3
+"Screw_Shaft_Length" = 10
+
+"Screw_Hole_Separation_C2C" = 20
+
+"Solder_Board_Small_Screw_Hole_Separation" = 37
+"Solder_Board_Small_Screw_Hole_Diameter" = 3.3
+"Solder_Board_Small_Length" = 45.72
+"Solder_Board_Small_Width" = 33.02
+"Solder_Board_Small_Thickness" = 1.6
+
+"ESC_Length" = 35
+"ESC_Width" = 17
+"ESC_Thickness" = 5
+
+"Battery_Length" = 105
+"Battery_Width" = 33
+"Battery_Thickness" = 24
+
+"Battery_Holder_Screw_Hole_Distance_Long" = 85
+"Battery_Holder_Screw_Hole_Distance_Short" = 40
