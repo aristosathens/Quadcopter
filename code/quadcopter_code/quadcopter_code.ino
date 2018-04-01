@@ -44,6 +44,7 @@
 //Structs - Use this to easily pass the data around and to avoid using an unecessary number of global variables
 struct data_struct {
   bool calibrate_flag = false;
+  int temperature;
   boolean set_gyro_angles;
   int gyro_x, gyro_y, gyro_z;
   long gyro_x_cal, gyro_y_cal, gyro_z_cal;
@@ -69,7 +70,6 @@ struct command_struct{
 };
 
 //Global Variables
-int temperature;
 long loop_timer;
 
 
@@ -198,7 +198,7 @@ void read_MPU6050(data_struct &data){                                     //Subr
   data.acc_x = Wire.read()<<8|Wire.read();                                  //Add the low and high byte to the acc_x variable
   data.acc_y = Wire.read()<<8|Wire.read();                                  //Add the low and high byte to the acc_y variable
   data.acc_z = Wire.read()<<8|Wire.read();                                  //Add the low and high byte to the acc_z variable
-  temperature = Wire.read()<<8|Wire.read();                                 //Add the low and high byte to the temperature variable
+  data.temperature = Wire.read()<<8|Wire.read();                                 //Add the low and high byte to the temperature variable
   data.gyro_x = Wire.read()<<8|Wire.read();                                 //Add the low and high byte to the gyro_x variable
   data.gyro_y = Wire.read()<<8|Wire.read();                                 //Add the low and high byte to the gyro_y variable
   data.gyro_z = Wire.read()<<8|Wire.read();                                 //Add the low and high byte to the gyro_z variable
@@ -253,7 +253,7 @@ void process_MPU6050_data(data_struct &data){
 
 void init_receiver(){
     vw_set_rx_pin(RECEIVER_PIN);
-    vw_set_ptt_inverted(true);      // Required for DR3100
+    vw_set_ptt_inverted(true);      // Required for DR3100 - Unclear if we need the to invert. We are using a 433 MHz RF transmitter/receiver. DR3100 is a wireless RF transmitter/receiver module
     vw_setup(2000);                 // Bits per sec
     vw_rx_start();                  // Start the receiver PLL running
 }
