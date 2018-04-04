@@ -5,7 +5,8 @@
 "Motor_Mount_Hole_Diameter" = 8
 "Motor_Shaft_Diameter" = 3
 
-"Screw_Nut_Diameter" = 5
+"Screw_Nut_Diameter" = 6.5
+"Screw_Nut_Thickness" = 2.5
 "Screw_Diameter" = 3
 "Screw_Shaft_Length" = 10
 
@@ -25,5 +26,7 @@
 "Battery_Width" = 33
 "Battery_Thickness" = 24
 
-"Battery_Holder_Screw_Hole_Distance_Long" = 85
+"Battery_Holder_Screw_Hole_Distance_Long" = 115
 "Battery_Holder_Screw_Hole_Distance_Short" = 40
+
+"Tooth_Width" = 15

@@ -40,6 +40,8 @@
 #define READ_BUTTON_2 PINB & B00000010                  //D9
 #define READ_BUTTON_3 PINB & B00000100                  //D10
 #define READ_BUTTON_4 PINB & B00001000                  //D11
+#define READ_BUTTON_5 PIND & B01000000                  //D6
+#define READ_BUTTON_6 PIND & B10000000                  //D7
 
 //Global Variables
 long loop_timer;
